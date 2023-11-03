@@ -1,0 +1,319 @@
+<robot name="rollerWalker" xmlns:xacro="http://ros.org/wiki/xacro">
+    <!-- 色の定義 -->
+    <material name="red">
+        <color rgba="0.9 0.2 0.2 1.0"/>
+    </material>
+
+    <material name="green">
+        <color rgba="0.2 0.9 0.2 1.0"/>
+    </material>
+
+    <material name="blue">
+        <color rgba="0.2 0.2 0.9 1.0"/>
+    </material>
+
+    <material name="yellow">
+        <color rgba="0.9 0.9 0.2 1.0"/>
+    </material>
+    <material name="white">
+        <color rgba="0.9 0.9 0.9 1.0"/>
+    </material>
+
+    <!-- 各パラメータ -->
+
+    <!-- ボディ関連 -->
+    <xacro:property name="body_z" value="0.2" /> <!-- ボディの高さ -->
+    <xacro:property name="body_length" value="0.47" />
+    <xacro:property name="body_width" value="0.29" />
+    <xacro:property name="body_thickness" value="0.123" />
+
+    <!-- 各リンクの長さ -->
+    <xacro:property name="l2" value="0.2" />
+    <xacro:property name="l3" value="0.243" />
+    <xacro:property name="l4" value="0.031" />
+
+    <!-- タイヤ関連 -->
+    <xacro:property name="wheel_radius" value="0.035" />
+    <xacro:property name="wheel_thickness" value="0.024" />
+
+    <!-- ジョイント1関連 -->
+    <xacro:property name="joint_1_radius" value="0.05" />
+    <xacro:property name="joint_1_thickness" value="0.1" />
+    
+    <!-- ジョイント2関連 -->
+    <xacro:property name="joint_2_radius" value="0.05" />
+    <xacro:property name="joint_2_thickness" value="0.060" />
+
+    <!-- ジョイント3関連 -->
+    <xacro:property name="joint_3_radius" value="0.04" />
+    <xacro:property name="joint_3_thickness" value="0.05" />
+
+    <!-- ジョイント4関連 -->
+    <xacro:property name="joint_4_radius" value="0.02" />
+    <xacro:property name="joint_4_thickness" value="0.044" />
+
+    <!-- 各足の長さはlink_n_xの値を変えれば良い -->
+    <!-- リンク2関連 -->
+    <xacro:property name="link_2_x" value="0.2" />
+    <xacro:property name="link_2_y" value="0.055" />
+    <xacro:property name="link_2_z" value="0.09" />
+
+    <!-- リンク3関連 -->
+    <xacro:property name="link_3_x" value="0.188" />
+    <xacro:property name="link_3_y" value="0.045" />
+    <xacro:property name="link_3_z" value="0.049" />
+
+    <!-- リンク4関連 -->
+    <xacro:property name="link_4_x" value="0.044" />
+    <xacro:property name="link_4_y" value="0.043" />
+    <xacro:property name="link_4_z" value="0.031" />
+
+
+    <!-- 脚のマクロ -->
+    <xacro:macro name="leg_macro" params="leg_posi">
+        <!-- ジョイント１とジョイント２の設定 -->
+        <joint name="joint_1_${leg_posi}_to_joint_2_${leg_posi}" type="revolute">
+            <axis xyz="0 0 1"/>
+            <parent link="joint_1_${leg_posi}"/>
+            <child  link="joint_2_${leg_posi}"/>
+            <origin rpy="1.57070 0 0" xyz="0 0 0"/>
+            <limit lower="-1.5" upper="1.5" effort="0" velocity="0"/>
+        </joint>
+
+        <!-- ジョイント２の描画 -->
+        <link name = "joint_2_${leg_posi}">
+            <visual>
+                <geometry>
+                    <cylinder radius="${joint_2_radius}" length="${joint_2_thickness}"/> 
+                </geometry>
+                <origin xyz="${joint_1_radius/2} 0 0.0" rpy="0 0 0"/> 
+                <material name = "green"/>
+            </visual>
+        </link>
+
+
+        <!-- ジョイント２とリンク２の描画 -->
+        <joint name="joint_2_${leg_posi}_to_link_2_${leg_posi}" type="fixed">
+            <axis xyz="0 0 1"/>
+            <parent link="joint_2_${leg_posi}"/>
+            <child  link="link_2_${leg_posi}"/>
+            <origin rpy="-1.57070 0 0" xyz="0 0 0"/>
+        </joint>
+        
+        <link name = "link_2_${leg_posi}">
+            <visual>
+                <geometry>
+                    <box size = "${link_2_x} ${link_2_y} ${link_2_z}" />
+                </geometry>
+                <origin xyz="${link_2_x/2} 0 0.0" rpy="0 0 0"/> 
+                <material name = "white"/>
+            </visual>
+        </link>
+
+        <!-- リンク2とジョイント3の設定 -->
+        <joint name="link_2_${leg_posi}_to_joint_3_${leg_posi}" type="revolute">
+            <axis xyz="0 0 1"/>
+            <parent link="link_2_${leg_posi}"/>
+            <child  link="joint_3_${leg_posi}"/>
+            <origin rpy="1.57070 0 0" xyz="${link_2_x} 0 0"/>
+            <limit lower="-2.0" upper="1.5" effort="0" velocity="0"/>
+        </joint>
+
+        <!-- ジョイント3の描画 -->
+        <link name = "joint_3_${leg_posi}">
+            <visual>
+                <geometry>
+                    <cylinder radius="${joint_3_radius}" length="${joint_3_thickness}"/> 
+                </geometry>
+                <origin xyz="0 0 0.0" rpy="0 0 0"/> 
+                <material name = "yellow"/>
+            </visual>
+        </link>
+
+
+         <!-- ジョイント3とリンク3の描画 -->
+        <joint name="joint_3_${leg_posi}_to_link_3_${leg_posi}" type="fixed">
+            <axis xyz="0 0 1"/>
+            <parent link="joint_3_${leg_posi}"/>
+            <child  link="link_3_${leg_posi}"/>
+            <origin rpy="-1.57070 0 0" xyz="0 0 0"/>
+        </joint>
+        
+        <link name = "link_3_${leg_posi}">
+            <visual>
+                <geometry>
+                    <box size = "${link_3_x} ${link_3_y} ${link_3_z}" />
+                </geometry>
+                <origin xyz="${link_3_x/2} 0 0.0" rpy="0 0 0"/> 
+                <material name = "white"/>
+            </visual>
+        </link>
+
+
+         <!-- リンク3とジョイント4の設定 -->
+        <joint name="link_3_${leg_posi}_to_joint_4_${leg_posi}" type="revolute">
+            <axis xyz="0 0 1"/>
+            <parent link="link_3_${leg_posi}"/>
+            <child  link="joint_4_${leg_posi}"/>
+            <origin rpy="1.57070 0 0" xyz="${link_3_x} 0 0"/>
+            <limit lower="-2.0" upper="1.5" effort="0" velocity="0"/>
+        </joint>
+
+        <!-- ジョイント4の描画 -->
+        <link name = "joint_4_${leg_posi}">
+            <visual>
+                <geometry>
+                    <cylinder radius="${joint_4_radius}" length="${joint_4_thickness}"/> 
+                </geometry>
+                <origin xyz="0 0 0.0" rpy="0 0 0"/> 
+                <material name = "yellow"/>
+            </visual>
+        </link>
+
+
+        <!-- ジョイント4とリンク4の描画 -->
+        <joint name="joint_4_${leg_posi}_to_link_4_${leg_posi}" type="fixed">
+            <axis xyz="0 0 1"/>
+            <parent link="joint_4_${leg_posi}"/>
+            <child  link="link_4_${leg_posi}"/>
+            <origin rpy="-1.57070 0 0" xyz="0 0 0"/>
+        </joint>
+        
+        <link name = "link_4_${leg_posi}">
+            <visual>
+                <geometry>
+                    <box size = "${link_4_x} ${link_4_y} ${link_4_z}" />
+                </geometry>
+                <origin xyz="${link_4_x/2} 0 0.0" rpy="0 0 0"/> 
+                <material name = "red"/>
+            </visual>
+        </link>
+
+
+        <!-- リンク4とホイールの設定 -->
+        <joint name="link_4_${leg_posi}_to_wheel_${leg_posi}" type="continuous">
+            <axis xyz="0 0 1"/>
+            <parent link="link_4_${leg_posi}"/>
+            <child  link="wheel_${leg_posi}"/>
+            <origin rpy="0 1.57070 0" xyz="${link_4_x + wheel_thickness/2} 0 0"/>
+            <!-- <limit lower="-1.79769e+308" upper="1.79769e+308" effort="0" velocity="0"/> -->
+        </joint>
+
+        <!-- ホイールの描画 -->
+        <link name = "wheel_${leg_posi}">
+            <visual>
+                <geometry>
+                    <cylinder radius="${wheel_radius}" length="${wheel_thickness}"/> 
+                </geometry>
+                <origin xyz="0 0 0.0" rpy="0 0 0"/> 
+                <material name = "blue"/>
+            </visual>
+        </link>
+
+
+
+    </xacro:macro>  
+
+    
+    <!-- 本体の描画 -->
+    <link name="base_link"/>
+
+    <joint name="base_to_body" type="fixed">
+        <parent link="base_link"/>
+        <child  link="body"/>
+        <origin xyz="0 0 ${body_z}" rpy="0 0 0"/>
+    </joint>
+
+    <!-- ボディ --> 
+    <link name = "body">
+        <visual>
+            <geometry>
+                <box size = "${body_length} ${body_width} ${body_thickness}" />
+            </geometry>
+            <origin xyz="0 0 0.0" rpy="0 0 0"/> 
+            <material name = "white"/>
+        </visual>
+    </link>
+
+    <!-- ジョイント1_LF -->
+    <joint name="body_to_joint_1_lf" type="revolute">
+        <parent link="body"/>
+        <child  link="joint_1_lf"/>
+        <axis xyz="0 0 1"/>
+        <origin xyz="${body_length/2 - joint_1_radius/2} ${body_width/2 - joint_1_radius/2} 0.0" rpy="0 0 0"/>
+        <limit lower="0.1" upper="3" effort="0" velocity="0"/>
+    </joint>
+
+     <link name = "joint_1_lf">
+        <visual>
+            <geometry>
+                <cylinder radius="${joint_1_radius}" length="${joint_1_thickness}"/> 
+            </geometry>
+            <origin xyz="0 0 0.0" rpy="0 0 0"/> 
+            <material name = "blue"/>
+        </visual>
+    </link>
+
+    <!-- ジョイント1_LR -->
+    <joint name="body_to_joint_1_lr" type="revolute">
+        <parent link="body"/>
+        <child  link="joint_1_lr"/>
+        <axis xyz="0 0 1"/>
+        <origin xyz="${-(body_length/2 - joint_1_radius/2)} ${body_width/2 - joint_1_radius/2} 0.0" rpy="0 0 0"/>
+        <limit lower="0.1" upper="3" effort="0" velocity="0"/>
+    </joint>
+
+     <link name = "joint_1_lr">
+        <visual>
+            <geometry>
+                <cylinder radius="${joint_1_radius}" length="${joint_1_thickness}"/> 
+            </geometry>
+            <origin xyz="0 0 0.0" rpy="0 0 0"/> 
+            <material name = "blue"/>
+        </visual>
+    </link>
+   
+   <!-- ジョイント1_RR -->
+    <joint name="body_to_joint_1_rr" type="revolute">
+        <parent link="body"/>
+        <child  link="joint_1_rr"/>
+        <axis xyz="0 0 1"/>
+        <origin xyz="${-(body_length/2 - joint_1_radius/2)} ${-(body_width/2 - joint_1_radius/2)} 0.0" rpy="0 0 0"/>
+        <limit lower="-3" upper="-0.1" effort="0" velocity="0"/>
+    </joint>
+
+     <link name = "joint_1_rr">
+        <visual>
+            <geometry>
+                <cylinder radius="${joint_1_radius}" length="${joint_1_thickness}"/> 
+            </geometry>
+            <origin xyz="0 0 0.0" rpy="0 0 0"/> 
+            <material name = "blue"/>
+        </visual>
+    </link>
+
+    <!-- ジョイント1_RF -->
+    <joint name="body_to_joint_1_rf" type="revolute">
+        <parent link="body"/>
+        <child  link="joint_1_rf"/>
+        <axis xyz="0 0 1"/>
+        <origin xyz="${body_length/2 - joint_1_radius/2} ${-(body_width/2 - joint_1_radius/2)} 0.0" rpy="0 0 0"/>
+        <limit lower="-3" upper="-0.1" effort="0" velocity="0"/>
+    </joint>
+
+     <link name = "joint_1_rf">
+        <visual>
+            <geometry>
+                <cylinder radius="${joint_1_radius}" length="${joint_1_thickness}"/> 
+            </geometry>
+            <origin xyz="0 0 0.0" rpy="0 0 0"/> 
+            <material name = "blue"/>
+        </visual>
+    </link>
+
+    <!-- 脚のマクロの呼び出し -->
+    <xacro:leg_macro leg_posi="lf"/>
+    <xacro:leg_macro leg_posi="lr"/>
+    <xacro:leg_macro leg_posi="rr"/>
+    <xacro:leg_macro leg_posi="rf"/>
+</robot>

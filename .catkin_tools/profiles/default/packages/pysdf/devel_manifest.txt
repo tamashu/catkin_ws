@@ -1,0 +1,6 @@
+pysdf
+/home/tama/catkin_ws/devel/.private/pysdf/cmake.lock /home/tama/catkin_ws/devel/./cmake.lock
+/home/tama/catkin_ws/devel/.private/pysdf/share/pysdf/cmake/pysdfConfig-version.cmake /home/tama/catkin_ws/devel/share/pysdf/cmake/pysdfConfig-version.cmake
+/home/tama/catkin_ws/devel/.private/pysdf/share/pysdf/cmake/pysdfConfig.cmake /home/tama/catkin_ws/devel/share/pysdf/cmake/pysdfConfig.cmake
+/home/tama/catkin_ws/devel/.private/pysdf/lib/python3/dist-packages/pysdf/__init__.py /home/tama/catkin_ws/devel/lib/python3/dist-packages/pysdf/__init__.py
+/home/tama/catkin_ws/devel/.private/pysdf/lib/pkgconfig/pysdf.pc /home/tama/catkin_ws/devel/lib/pkgconfig/pysdf.pc

@@ -1,0 +1,1 @@
+/home/tama/catkin_ws/devel/.private/pysdf/share/pysdf/cmake/pysdfConfig-version.cmake

@@ -1,0 +1,1 @@
+/home/tama/catkin_ws/devel/.private/basic_lecture/share/basic_lecture/cmake/basic_lectureConfig-version.cmake

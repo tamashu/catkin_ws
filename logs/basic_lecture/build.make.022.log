@@ -1,0 +1,5 @@
+[ 30%] Built target basic_array_talker
+[ 40%] Built target basic_simple_talker
+[ 60%] Built target basic_simple_listener
+[ 80%] Built target basic_array_listener
+[100%] Built target basic_logger
