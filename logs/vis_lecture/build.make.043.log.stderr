@@ -1,0 +1,12 @@
+[01m[K/home/tama/catkin_ws/src/vis_lecture/src/rollerWalker_joint_state_publisher.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/tama/catkin_ws/src/vis_lecture/src/rollerWalker_joint_state_publisher.cpp:70:55:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KBaseRollerWalker::calTheta2()[m[K’
+   70 |         js0.position[0] = base_rollerWalker.calTheta2([01;31m[K)[m[K    //第一関節
+      |                                                       [01;31m[K^[m[K
+In file included from [01m[K/home/tama/catkin_ws/src/vis_lecture/src/rollerWalker_joint_state_publisher.cpp:3[m[K:
+[01m[K/home/tama/catkin_ws/src/vis_lecture/include/vis_lecture/BaseRollerWalker.h:54:12:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kdouble BaseRollerWalker::calTheta2(double)[m[K’
+   54 |     double [01;36m[KcalTheta2[m[K(double target_d);
+      |            [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/tama/catkin_ws/src/vis_lecture/include/vis_lecture/BaseRollerWalker.h:54:12:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+make[2]: *** [CMakeFiles/rollerWalker_joint_state_publisher.dir/build.make:63: CMakeFiles/rollerWalker_joint_state_publisher.dir/src/rollerWalker_joint_state_publisher.cpp.o] エラー 1
+make[1]: *** [CMakeFiles/Makefile2:1570: CMakeFiles/rollerWalker_joint_state_publisher.dir/all] エラー 2
+make: *** [Makefile:141: all] エラー 2

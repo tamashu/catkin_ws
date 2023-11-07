@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/tama/catkin_ws/src/vis_lecture/src/joint_publisher1.cpp" "/home/tama/catkin_ws/build/vis_lecture/CMakeFiles/vis_joint_publisher.dir/src/joint_publisher1.cpp.o"
+  "/home/tama/catkin_ws/src/vis_lecture/src/joint_publisher.cpp" "/home/tama/catkin_ws/build/vis_lecture/CMakeFiles/vis_joint_publisher.dir/src/joint_publisher.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -17,6 +17,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "/home/tama/catkin_ws/src/vis_lecture/include"
   "/opt/ros/noetic/include"
   "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   )

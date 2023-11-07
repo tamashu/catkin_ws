@@ -12,6 +12,8 @@ find_package(catkin REQUIRED COMPONENTS
   rospy
   std_msgs
   tf
+  tf2
+  tf2_ros
 )
 
 ## System dependencies are found with CMake's conventions
@@ -104,9 +106,9 @@ find_package(catkin REQUIRED COMPONENTS
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
-#  INCLUDE_DIRS include
-#  LIBRARIES vis_lecture
-#  CATKIN_DEPENDS roscpp rospy std_msgs tf
+ INCLUDE_DIRS include
+ LIBRARIES vis_lecture
+ CATKIN_DEPENDS roscpp rospy std_msgs tf
 #  DEPENDS system_lib
 )
 
@@ -117,7 +119,7 @@ catkin_package(
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 include_directories(
-# include
+include
   ${catkin_INCLUDE_DIRS}
 )
 
@@ -205,8 +207,20 @@ include_directories(
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
-add_executable(vis_joint_publisher  src/joint_publisher1.cpp)
+add_executable(vis_joint_publisher  src/joint_publisher.cpp)
+add_executable(rollerWalker_joint_state_publisher  src/rollerWalker_joint_state_publisher.cpp)
+add_executable(vis_tf_broadcast src/vis_tf_broadcast.cpp)
+add_executable(vis_tf_listen src/vis_tf_listen.cpp)
+add_executable(vis_robot_sim src/vis_robot_sim.cpp)
+
+add_library(BaseRollerWalker src/BaseRollerWalker.cpp)
 
 target_link_libraries(vis_joint_publisher
   ${catkin_LIBRARIES}
 )
+target_link_libraries(rollerWalker_joint_state_publisher
+  ${catkin_LIBRARIES} BaseRollerWalker
+)
+target_link_libraries(vis_tf_broadcast ${catkin_LIBRARIES})
+target_link_libraries(vis_tf_listen ${catkin_LIBRARIES})
+target_link_libraries(vis_robot_sim ${catkin_LIBRARIES})

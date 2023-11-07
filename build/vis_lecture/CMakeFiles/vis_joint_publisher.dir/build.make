@@ -57,27 +57,27 @@ include CMakeFiles/vis_joint_publisher.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/vis_joint_publisher.dir/flags.make
 
-CMakeFiles/vis_joint_publisher.dir/src/joint_publisher1.cpp.o: CMakeFiles/vis_joint_publisher.dir/flags.make
-CMakeFiles/vis_joint_publisher.dir/src/joint_publisher1.cpp.o: /home/tama/catkin_ws/src/vis_lecture/src/joint_publisher1.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tama/catkin_ws/build/vis_lecture/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/vis_joint_publisher.dir/src/joint_publisher1.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/vis_joint_publisher.dir/src/joint_publisher1.cpp.o -c /home/tama/catkin_ws/src/vis_lecture/src/joint_publisher1.cpp
+CMakeFiles/vis_joint_publisher.dir/src/joint_publisher.cpp.o: CMakeFiles/vis_joint_publisher.dir/flags.make
+CMakeFiles/vis_joint_publisher.dir/src/joint_publisher.cpp.o: /home/tama/catkin_ws/src/vis_lecture/src/joint_publisher.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tama/catkin_ws/build/vis_lecture/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/vis_joint_publisher.dir/src/joint_publisher.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/vis_joint_publisher.dir/src/joint_publisher.cpp.o -c /home/tama/catkin_ws/src/vis_lecture/src/joint_publisher.cpp
 
-CMakeFiles/vis_joint_publisher.dir/src/joint_publisher1.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vis_joint_publisher.dir/src/joint_publisher1.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tama/catkin_ws/src/vis_lecture/src/joint_publisher1.cpp > CMakeFiles/vis_joint_publisher.dir/src/joint_publisher1.cpp.i
+CMakeFiles/vis_joint_publisher.dir/src/joint_publisher.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vis_joint_publisher.dir/src/joint_publisher.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tama/catkin_ws/src/vis_lecture/src/joint_publisher.cpp > CMakeFiles/vis_joint_publisher.dir/src/joint_publisher.cpp.i
 
-CMakeFiles/vis_joint_publisher.dir/src/joint_publisher1.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vis_joint_publisher.dir/src/joint_publisher1.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tama/catkin_ws/src/vis_lecture/src/joint_publisher1.cpp -o CMakeFiles/vis_joint_publisher.dir/src/joint_publisher1.cpp.s
+CMakeFiles/vis_joint_publisher.dir/src/joint_publisher.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vis_joint_publisher.dir/src/joint_publisher.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tama/catkin_ws/src/vis_lecture/src/joint_publisher.cpp -o CMakeFiles/vis_joint_publisher.dir/src/joint_publisher.cpp.s
 
 # Object files for target vis_joint_publisher
 vis_joint_publisher_OBJECTS = \
-"CMakeFiles/vis_joint_publisher.dir/src/joint_publisher1.cpp.o"
+"CMakeFiles/vis_joint_publisher.dir/src/joint_publisher.cpp.o"
 
 # External object files for target vis_joint_publisher
 vis_joint_publisher_EXTERNAL_OBJECTS =
 
-/home/tama/catkin_ws/devel/.private/vis_lecture/lib/vis_lecture/vis_joint_publisher: CMakeFiles/vis_joint_publisher.dir/src/joint_publisher1.cpp.o
+/home/tama/catkin_ws/devel/.private/vis_lecture/lib/vis_lecture/vis_joint_publisher: CMakeFiles/vis_joint_publisher.dir/src/joint_publisher.cpp.o
 /home/tama/catkin_ws/devel/.private/vis_lecture/lib/vis_lecture/vis_joint_publisher: CMakeFiles/vis_joint_publisher.dir/build.make
 /home/tama/catkin_ws/devel/.private/vis_lecture/lib/vis_lecture/vis_joint_publisher: /opt/ros/noetic/lib/libtf.so
 /home/tama/catkin_ws/devel/.private/vis_lecture/lib/vis_lecture/vis_joint_publisher: /opt/ros/noetic/lib/libtf2_ros.so
@@ -87,14 +87,14 @@ vis_joint_publisher_EXTERNAL_OBJECTS =
 /home/tama/catkin_ws/devel/.private/vis_lecture/lib/vis_lecture/vis_joint_publisher: /usr/lib/x86_64-linux-gnu/libpthread.so
 /home/tama/catkin_ws/devel/.private/vis_lecture/lib/vis_lecture/vis_joint_publisher: /usr/lib/x86_64-linux-gnu/libboost_chrono.so.1.71.0
 /home/tama/catkin_ws/devel/.private/vis_lecture/lib/vis_lecture/vis_joint_publisher: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.71.0
-/home/tama/catkin_ws/devel/.private/vis_lecture/lib/vis_lecture/vis_joint_publisher: /opt/ros/noetic/lib/libxmlrpcpp.so
-/home/tama/catkin_ws/devel/.private/vis_lecture/lib/vis_lecture/vis_joint_publisher: /opt/ros/noetic/lib/libtf2.so
-/home/tama/catkin_ws/devel/.private/vis_lecture/lib/vis_lecture/vis_joint_publisher: /opt/ros/noetic/lib/libroscpp_serialization.so
 /home/tama/catkin_ws/devel/.private/vis_lecture/lib/vis_lecture/vis_joint_publisher: /opt/ros/noetic/lib/librosconsole.so
 /home/tama/catkin_ws/devel/.private/vis_lecture/lib/vis_lecture/vis_joint_publisher: /opt/ros/noetic/lib/librosconsole_log4cxx.so
 /home/tama/catkin_ws/devel/.private/vis_lecture/lib/vis_lecture/vis_joint_publisher: /opt/ros/noetic/lib/librosconsole_backend_interface.so
 /home/tama/catkin_ws/devel/.private/vis_lecture/lib/vis_lecture/vis_joint_publisher: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
 /home/tama/catkin_ws/devel/.private/vis_lecture/lib/vis_lecture/vis_joint_publisher: /usr/lib/x86_64-linux-gnu/libboost_regex.so.1.71.0
+/home/tama/catkin_ws/devel/.private/vis_lecture/lib/vis_lecture/vis_joint_publisher: /opt/ros/noetic/lib/libxmlrpcpp.so
+/home/tama/catkin_ws/devel/.private/vis_lecture/lib/vis_lecture/vis_joint_publisher: /opt/ros/noetic/lib/libtf2.so
+/home/tama/catkin_ws/devel/.private/vis_lecture/lib/vis_lecture/vis_joint_publisher: /opt/ros/noetic/lib/libroscpp_serialization.so
 /home/tama/catkin_ws/devel/.private/vis_lecture/lib/vis_lecture/vis_joint_publisher: /opt/ros/noetic/lib/librostime.so
 /home/tama/catkin_ws/devel/.private/vis_lecture/lib/vis_lecture/vis_joint_publisher: /usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.71.0
 /home/tama/catkin_ws/devel/.private/vis_lecture/lib/vis_lecture/vis_joint_publisher: /opt/ros/noetic/lib/libcpp_common.so

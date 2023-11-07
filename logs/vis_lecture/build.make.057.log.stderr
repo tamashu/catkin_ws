@@ -1,0 +1,7 @@
+[01m[K/home/tama/catkin_ws/src/vis_lecture/src/BaseRollerWalker.cpp:3:10:[m[K [01;31m[Kfatal error: [m[KBaseRollerWalker.hpp: そのようなファイルやディレクトリはありません
+    3 | #include [01;31m[K"BaseRollerWalker.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+make[2]: *** [CMakeFiles/BaseRollerWalker.dir/build.make:63: CMakeFiles/BaseRollerWalker.dir/src/BaseRollerWalker.cpp.o] エラー 1
+make[1]: *** [CMakeFiles/Makefile2:1275: CMakeFiles/BaseRollerWalker.dir/all] エラー 2
+make: *** [Makefile:141: all] エラー 2

@@ -1,0 +1,48 @@
+[01m[K/home/tama/catkin_ws/src/vis_lecture/src/rollerWalker_joint_state_publisher.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/tama/catkin_ws/src/vis_lecture/src/rollerWalker_joint_state_publisher.cpp:13:17:[m[K [01;31m[Kerror: [m[K‘[01m[KPI[m[K’ was not declared in this scope
+   13 |  double omega = [01;31m[KPI[m[K;
+      |                 [01;31m[K^~[m[K
+[01m[K/home/tama/catkin_ws/src/vis_lecture/src/rollerWalker_joint_state_publisher.cpp:21:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kz[m[K’ was not declared in this scope
+   21 |   [01;31m[Kz[m[K = wheel_diameter/2;
+      |   [01;31m[K^[m[K
+[01m[K/home/tama/catkin_ws/src/vis_lecture/src/rollerWalker_joint_state_publisher.cpp:21:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kwheel_diameter[m[K’ was not declared in this scope
+   21 |   z = [01;31m[Kwheel_diameter[m[K/2;
+      |       [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/tama/catkin_ws/src/vis_lecture/src/rollerWalker_joint_state_publisher.cpp:24:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kz[m[K’ was not declared in this scope
+   24 |   [01;31m[Kz[m[K = l4 + wheel_thickness;
+      |   [01;31m[K^[m[K
+[01m[K/home/tama/catkin_ws/src/vis_lecture/src/rollerWalker_joint_state_publisher.cpp:24:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kl4[m[K’ was not declared in this scope
+   24 |   z = [01;31m[Kl4[m[K + wheel_thickness;
+      |       [01;31m[K^~[m[K
+[01m[K/home/tama/catkin_ws/src/vis_lecture/src/rollerWalker_joint_state_publisher.cpp:24:12:[m[K [01;31m[Kerror: [m[K‘[01m[Kwheel_thickness[m[K’ was not declared in this scope
+   24 |   z = l4 + [01;31m[Kwheel_thickness[m[K;
+      |            [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/tama/catkin_ws/src/vis_lecture/src/rollerWalker_joint_state_publisher.cpp:30:72:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KBaseRollerWalker::BaseRollerWalker(double&, double&, double&, double&, double&)[m[K’
+   30 |     BaseRollerWalker base_rollerWalker(d_0, theta_0, omega, phi, phi_fr[01;31m[K)[m[K;
+      |                                                                        [01;31m[K^[m[K
+In file included from [01m[K/home/tama/catkin_ws/src/vis_lecture/src/rollerWalker_joint_state_publisher.cpp:3[m[K:
+[01m[K/home/tama/catkin_ws/src/vis_lecture/include/vis_lecture/BaseRollerWalker.h:49:2:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KBaseRollerWalker::BaseRollerWalker(double, double, double, double, double, double, double)[m[K’
+   49 |  [01;36m[KBaseRollerWalker[m[K(double d_0, double theta_0, double omega, double phi,  double phi_fr, double center_z, double target_z);
+      |  [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/tama/catkin_ws/src/vis_lecture/include/vis_lecture/BaseRollerWalker.h:49:2:[m[K [01;36m[Knote: [m[K  candidate expects 7 arguments, 5 provided
+[01m[K/home/tama/catkin_ws/src/vis_lecture/include/vis_lecture/BaseRollerWalker.h:46:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr BaseRollerWalker::BaseRollerWalker(const BaseRollerWalker&)[m[K’
+   46 | class [01;36m[KBaseRollerWalker[m[K
+      |       [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/tama/catkin_ws/src/vis_lecture/include/vis_lecture/BaseRollerWalker.h:46:7:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 5 provided
+[01m[K/home/tama/catkin_ws/src/vis_lecture/include/vis_lecture/BaseRollerWalker.h:46:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr BaseRollerWalker::BaseRollerWalker(BaseRollerWalker&&)[m[K’
+[01m[K/home/tama/catkin_ws/src/vis_lecture/include/vis_lecture/BaseRollerWalker.h:46:7:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 5 provided
+[01m[K/home/tama/catkin_ws/src/vis_lecture/src/rollerWalker_joint_state_publisher.cpp:69:49:[m[K [01;31m[Kerror: [m[K‘[01m[Kt[m[K’ was not declared in this scope; did you mean ‘[01m[Ktm[m[K’?
+   69 |         double d_lf  =base_rollerWalker.d_front([01;31m[Kt[m[K,d_0,omega);   //左前脚の長さ
+      |                                                 [01;31m[K^[m[K
+      |                                                 [32m[Ktm[m[K
+[01m[K/home/tama/catkin_ws/src/vis_lecture/src/rollerWalker_joint_state_publisher.cpp:77:55:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KBaseRollerWalker::calTheta2()[m[K’
+   77 |         js0.position[0] = base_rollerWalker.calTheta2([01;31m[K)[m[K    //第一関節
+      |                                                       [01;31m[K^[m[K
+In file included from [01m[K/home/tama/catkin_ws/src/vis_lecture/src/rollerWalker_joint_state_publisher.cpp:3[m[K:
+[01m[K/home/tama/catkin_ws/src/vis_lecture/include/vis_lecture/BaseRollerWalker.h:54:12:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kdouble BaseRollerWalker::calTheta2(double)[m[K’
+   54 |     double [01;36m[KcalTheta2[m[K(double target_d);
+      |            [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/tama/catkin_ws/src/vis_lecture/include/vis_lecture/BaseRollerWalker.h:54:12:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+make[2]: *** [CMakeFiles/rollerWalker_joint_state_publisher.dir/build.make:63: CMakeFiles/rollerWalker_joint_state_publisher.dir/src/rollerWalker_joint_state_publisher.cpp.o] エラー 1
+make[1]: *** [CMakeFiles/Makefile2:1570: CMakeFiles/rollerWalker_joint_state_publisher.dir/all] エラー 2
+make: *** [Makefile:141: all] エラー 2

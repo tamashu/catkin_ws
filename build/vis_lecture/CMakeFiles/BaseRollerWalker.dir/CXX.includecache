@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/tama/catkin_ws/src/vis_lecture/include/vis_lecture/BaseRollerWalker.hpp
+vector
+-
+fstream
+-
+string
+-
+
+/home/tama/catkin_ws/src/vis_lecture/src/BaseRollerWalker.cpp
+cmath
+-
+iostream
+-
+vis_lecture/BaseRollerWalker.hpp
+/home/tama/catkin_ws/src/vis_lecture/src/vis_lecture/BaseRollerWalker.hpp
+

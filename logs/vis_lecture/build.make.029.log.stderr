@@ -1,0 +1,7 @@
+[01m[K/home/tama/catkin_ws/src/vis_lecture/src/rollerWalker_joint_state_publisher.cpp:3:10:[m[K [01;31m[Kfatal error: [m[KBaseRollerWalker.h: そのようなファイルやディレクトリはありません
+    3 | #include [01;31m[K<BaseRollerWalker.h>[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+make[2]: *** [CMakeFiles/rollerWalker_joint_state_publisher.dir/build.make:63: CMakeFiles/rollerWalker_joint_state_publisher.dir/src/rollerWalker_joint_state_publisher.cpp.o] エラー 1
+make[1]: *** [CMakeFiles/Makefile2:1570: CMakeFiles/rollerWalker_joint_state_publisher.dir/all] エラー 2
+make: *** [Makefile:141: all] エラー 2

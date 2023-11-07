@@ -1,0 +1,16 @@
+[35m[1mScanning dependencies of target BaseRollerWalker[0m
+[  8%] [32mBuilding CXX object CMakeFiles/BaseRollerWalker.dir/src/BaseRollerWalker.cpp.o[0m
+[ 33%] Built target vis_tf_listen
+[ 41%] Built target vis_tf_broadcast
+[ 66%] Built target vis_robot_sim
+[ 75%] Built target vis_joint_publisher
+[01m[K/home/tama/catkin_ws/src/vis_lecture/src/BaseRollerWalker.cpp:[m[K In member function ‘[01m[Kvoid BaseRollerWalker::calAndSetTheta(double)[m[K’:
+[01m[K/home/tama/catkin_ws/src/vis_lecture/src/BaseRollerWalker.cpp:118:66:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K}[m[K’ token
+  118 |  std::cout << "時刻t: " << t << "  d_lf: " << d_lf << std::endl
+      |                                                                  [01;31m[K^[m[K
+      |                                                                  [32m[K;[m[K
+  119 | [32m[K}[m[K
+      | [32m[K~[m[K                                                                 
+make[2]: *** [CMakeFiles/BaseRollerWalker.dir/build.make:63: CMakeFiles/BaseRollerWalker.dir/src/BaseRollerWalker.cpp.o] エラー 1
+make[1]: *** [CMakeFiles/Makefile2:1275: CMakeFiles/BaseRollerWalker.dir/all] エラー 2
+make: *** [Makefile:141: all] エラー 2
