@@ -94,28 +94,38 @@ void BaseRollerWalker::calAndSetTheta(double t){
 	double d_lr  =d_rear(t,d_0,omega);   //左後ろ脚の長さ  
 	double d_rr  =d_rear(t,d_0,omega);   //右後ろ脚の長さ  
 	double d_rf  =d_front(t,d_0,omega);   //右前脚の長さ
+
+	if(is_rollerWalk){	//タイヤの中心がdとなるための計算
+		d_lf = d_lf - l4 - WHEEL_THICKNESS/2;
+		d_lr = d_lr - l4 - WHEEL_THICKNESS/2;
+		d_rr = d_rr - l4 - WHEEL_THICKNESS/2;
+		d_rf = d_rf - l4 - WHEEL_THICKNESS/2;
+	}
+
 	//左前脚
-	theta_1_lf = theta_front(t,theta_0,omega);
+	theta_1_lf = theta_front(t,theta_0,omega)+PI/2;
 	theta_2_lf = calTheta2(d_lf);
 	theta_3_lf = calTheta3(d_lf,theta_2_lf);
 	theta_4_lf = calTheta4(theta_2_lf,theta_3_lf,is_rollerWalk);
 	//左後ろ脚
-	theta_1_lr = theta_front(t,theta_0,omega);
+	theta_1_lr = theta_front(t,theta_0,omega)+PI/2;
 	theta_2_lr = calTheta2(d_lr);
 	theta_3_lr = calTheta3(d_lr,theta_2_lr);
 	theta_4_lr = calTheta4(theta_2_lr,theta_3_lr,is_rollerWalk);
 	//右後ろ脚
-	theta_1_rr = theta_front(t,theta_0,omega);
+	theta_1_rr = -theta_front(t,theta_0,omega) - PI/2;
 	theta_2_rr = calTheta2(d_rr);
 	theta_3_rr = calTheta3(d_rr,theta_2_rr);
 	theta_4_rr = calTheta4(theta_2_rr,theta_3_rr,is_rollerWalk);
 	//右前脚
-	theta_1_rf = theta_front(t,theta_0,omega);
+	theta_1_rf = -theta_front(t,theta_0,omega)- PI/2;
 	theta_2_rf = calTheta2(d_rf);
 	theta_3_rf = calTheta3(d_rf,theta_2_rf);
 	theta_4_rf = calTheta4(theta_2_rf,theta_3_rf,is_rollerWalk);
 
-	std::cout << "時刻t: " << t << "  d_lf: " << d_0 << std::endl;
+	//std::cout << "時刻t: " << t << "  d_lf: " << d_lf << std::endl;
+	//std::cout << "時刻t: " << t << " omega: "<<omega<<"  d_f:" << d_0 * (sin(omega * t + 3 * PI / 2) + 1) << std::endl;
+	
 }
 
 // 前脚の脚軌道関数
@@ -219,6 +229,7 @@ double BaseRollerWalker::calTheta2(double target_d) {
 	double denominator = 2 * LINK_2_LENGTH * sqrt(pow(target_d, 2) + pow(target_z - center_z, 2));
 
 	double ret = acos(numerator / denominator) + atan((target_z - center_z) /target_d ); //atan要チェック (acos2は[0,pi])
+
 	return ret;
 }
 

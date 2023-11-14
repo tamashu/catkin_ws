@@ -68,7 +68,8 @@
   <exec_depend>tf2</exec_depend>
   <exec_depend>rviz</exec_depend>
    <exec_depend>jsk_rviz_plugins</exec_depend>
-  
+  <depend>ros_control</depend>
+  <depend>ros_controllers</depend>
 
 
   <!-- The export tag contains other, unspecified, tags -->

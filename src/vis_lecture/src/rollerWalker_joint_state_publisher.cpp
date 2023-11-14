@@ -14,7 +14,8 @@ int main(int argc, char** argv)
 	double theta_0 = 0.15;
 	double omega = PI;
 	double phi = PI / 2;
-	double phi_fr = 3 * PI / 2;
+	//double phi_fr = 3 * PI / 2;
+    double phi_fr = 0;
     double  center_z = 0.15;      
     bool is_rollerWalk = true;
 
@@ -72,23 +73,23 @@ int main(int argc, char** argv)
         js0.position[3] = base_rollerWalker.getTheta4LF();    //第四関節
         js0.position[4] = t;    //ホイール
         //左後ろ脚
-        js0.position[5] = 1.0 * (float)count / 40.0;    //第一関節
-        js0.position[6] = 1 * (float)count / 40.0;      //第二関節
-        js0.position[7] = 1 * (float)count / 40.0;      //第三関節
-        js0.position[8] = 1 * (float)count / 40.0;      //第四関節
-        js0.position[9] = 1 * (float)count / 40.0;      //ホイール
+        js0.position[5] = base_rollerWalker.getTheta1LR();    //第一関節
+        js0.position[6] = base_rollerWalker.getTheta2LR();      //第二関節
+        js0.position[7] = base_rollerWalker.getTheta3LR();      //第三関節
+        js0.position[8] = base_rollerWalker.getTheta4LR();      //第四関節
+        js0.position[9] = t;      //ホイール
         // //右後ろ脚
-        js0.position[10] = 1.0 * (float)count / 40.0;   //第一関節
-        js0.position[11] = 1 * (float)count / 40.0;     //第二関節
-        js0.position[12] = 1 * (float)count / 40.0;     //第三関節
-        js0.position[13] = 1 * (float)count / 40.0;     //第四関節
-        js0.position[14] = 1 * (float)count / 40.0;     //ホイール
+        js0.position[10] = base_rollerWalker.getTheta1RR();   //第一関節
+        js0.position[11] = base_rollerWalker.getTheta2RR();     //第二関節
+        js0.position[12] = base_rollerWalker.getTheta3RR();     //第三関節
+        js0.position[13] = base_rollerWalker.getTheta4RR();     //第四関節
+        js0.position[14] = t;     //ホイール
         //右前脚
-        js0.position[15] = 1.0 * (float)count / 40.0;   //第一関節
-        js0.position[16] = 1 * (float)count / 40.0;     //第二関節
-        js0.position[17] = 1 * (float)count / 40.0;     //第三関節
-        js0.position[18] = 1 * (float)count / 40.0;     //第四関節
-        js0.position[19] = 1 * (float)count / 40.0;     //ホイール
+        js0.position[15] = base_rollerWalker.getTheta1RF();   //第一関節
+        js0.position[16] = base_rollerWalker.getTheta2RF();     //第二関節
+        js0.position[17] = base_rollerWalker.getTheta3RF();     //第三関節
+        js0.position[18] = base_rollerWalker.getTheta4RF();     //第四関節
+        js0.position[19] = t;     //ホイール
         joint_pub.publish(js0);
         count++;
 
