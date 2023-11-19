@@ -144,7 +144,7 @@
         </joint>
 
         <!-- ジョイント2のトランスミッション -->
-        <transmission name="joint_2_${leg_posi}_trans" type="SimpleTransmission">
+        <transmission name="joint_2_${leg_posi}_trans" >
             <type>transmission_interface/SimpleTransmission</type>
             <actuator name="$joint_2_${leg_posi}_motor">
                 <mechanicalReduction>1</mechanicalReduction>
@@ -224,7 +224,7 @@
         </joint>
 
         <!-- ジョイント3のトランスミッション -->
-        <transmission name="joint_3_${leg_posi}_trans" type="SimpleTransmission">
+        <transmission name="joint_3_${leg_posi}_trans" >
             <type>transmission_interface/SimpleTransmission</type>
             <actuator name="$joint_3_${leg_posi}_motor">
                 <mechanicalReduction>1</mechanicalReduction>
@@ -304,7 +304,7 @@
         </joint>
 
         <!-- ジョイント3のトランスミッション -->
-        <transmission name="joint_4_${leg_posi}_trans" type="SimpleTransmission">
+        <transmission name="joint_4_${leg_posi}_trans" >
             <type>transmission_interface/SimpleTransmission</type>
             <actuator name="$joint_4_${leg_posi}_motor">
                 <mechanicalReduction>1</mechanicalReduction>
@@ -385,7 +385,7 @@
         </joint>
 
         <!-- ジョイント3のトランスミッション -->
-        <transmission name="wheel_trans" type="SimpleTransmission">
+        <transmission name="wheel_trans" >
             <type>transmission_interface/SimpleTransmission</type>
             <actuator name="$wheel_motor">
                 <mechanicalReduction>1</mechanicalReduction>
@@ -469,11 +469,11 @@
         <axis xyz="0 0 1"/>
         <origin xyz="${body_length/2 - joint_1_radius/2} ${body_width/2 - joint_1_radius/2} 0.0" rpy="0 0 0"/>
         <dynamics damping="${body_to_joint_1_damping}"/>
-        <limit lower="0.1" upper="3" effort="0" velocity="0"/>
+        <limit lower="0.2" upper="3" effort="0" velocity="0"/>
     </joint>
 
     <!-- ジョイント1_LFトランスミッション設定 -->
-    <transmission name="joint_1_lf_trans" type="SimpleTransmission">
+    <transmission name="joint_1_lf_trans" >
         <type>transmission_interface/SimpleTransmission</type>
         <actuator name="$joint_1_lf_motor">
           <mechanicalReduction>1</mechanicalReduction>
@@ -514,11 +514,11 @@
         <axis xyz="0 0 1"/>
         <origin xyz="${-(body_length/2 - joint_1_radius/2)} ${body_width/2 - joint_1_radius/2} 0.0" rpy="0 0 0"/>
         <dynamics damping="${body_to_joint_1_damping}"/>
-        <limit lower="0.1" upper="3" effort="0" velocity="0"/>
+        <limit lower="0.2" upper="3" effort="0" velocity="0"/>
     </joint>
 
     <!-- ジョイント1_LRトランスミッション設定 -->
-    <transmission name="joint_1_lr_trans" type="SimpleTransmission">
+    <transmission name="joint_1_lr_trans" >
         <type>transmission_interface/SimpleTransmission</type>
         <actuator name="$joint_1_lr_motor">
             <mechanicalReduction>1</mechanicalReduction>
@@ -559,11 +559,11 @@
         <axis xyz="0 0 1"/>
         <origin xyz="${-(body_length/2 - joint_1_radius/2)} ${-(body_width/2 - joint_1_radius/2)} 0.0" rpy="0 0 0"/>
         <dynamics damping="${body_to_joint_1_damping}"/>
-        <limit lower="-3" upper="-0.1" effort="0" velocity="0"/>
+        <limit lower="-3" upper="-0.2" effort="0" velocity="0"/>
     </joint>
 
     <!-- ジョイント1_RRトランスミッション設定 -->
-    <transmission name="joint_1_rr_trans" type="SimpleTransmission">
+    <transmission name="joint_1_rr_trans" >
         <type>transmission_interface/SimpleTransmission</type>
         <actuator name="$joint_1_rr_motor">
             <mechanicalReduction>1</mechanicalReduction>
@@ -604,11 +604,11 @@
         <axis xyz="0 0 1"/>
         <origin xyz="${body_length/2 - joint_1_radius/2} ${-(body_width/2 - joint_1_radius/2)} 0.0" rpy="0 0 0"/>
         <dynamics damping="${body_to_joint_1_damping}"/>
-        <limit lower="-3" upper="-0.1" effort="0" velocity="0"/>
+        <limit lower="-3" upper="-0.2" effort="0" velocity="0"/>
     </joint>
 
     <!-- ジョイント1_RFトランスミッション設定 -->
-    <transmission name="joint_1_rf_trans" type="SimpleTransmission">
+    <transmission name="joint_1_rf_trans" >
         <type>transmission_interface/SimpleTransmission</type>
         <actuator name="$joint_1_rf_motor">
             <mechanicalReduction>1</mechanicalReduction>

@@ -1,0 +1,17 @@
+<launch>
+    <!--CougarBotのURDFモデルをパラメータサーバにロードする-->
+    <param name = "robot_description" textfile = "$(find test_arm)/urdf/test_arm.urdf"/>
+
+    <!--空のワールドでGazeboを開始する-->
+    <include file = "$(find gazebo_ros)/launch/empty_world.launch"/>
+
+    <!--GazeboでCougarBotを生成し，パラメータサーバからのその記述を受ける-->
+    <node name = "spawn_urdf" pkg = "gazebo_ros" type = "spawn_model" args = "-param robot_description -urdf -model test_arm"/>
+
+    <!--コントローラをROSのパラメータサーバに読み込む-->
+    <rosparam file = "$(find test_arm)/config/controller.yaml" command = "load"/>
+
+    <!--コントローラ作成-->
+    <node name = "controller_spawner" pkg = "controller_manager" type = "spawner" ns="/test_arm" args = "hip_trans shoulder_trans elbow_trans wrist_trans"/>
+
+</launch>

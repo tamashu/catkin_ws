@@ -1,0 +1,6 @@
+[ 16%] Built target BaseRollerWalker
+[ 33%] Built target vis_tf_listen
+[ 50%] Built target vis_tf_broadcast
+[ 66%] Built target vis_joint_publisher
+[ 83%] Built target vis_robot_sim
+[100%] Built target rollerWalker_joint_state_publisher

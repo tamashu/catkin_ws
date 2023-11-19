@@ -1,0 +1,16 @@
+test_arm:
+    hip_trans:
+        type: position_controllers/JointPositionController
+        joint: hip
+
+    shoulder_trans:
+        type: position_controllers/JointPositionController
+        joint: shoulder
+
+    elbow_trans:
+        type: position_controllers/JointPositionController
+        joint: elbow
+
+    wrist_trans:
+        type: position_controllers/JointPositionController
+        joint: wrist
