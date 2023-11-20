@@ -1,1 +1,0 @@
-/home/tama/catkin_ws/devel/.private/vis_lecture/share/vis_lecture/cmake/vis_lectureConfig-version.cmake

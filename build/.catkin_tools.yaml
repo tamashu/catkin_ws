@@ -1,6 +1,0 @@
-devel_space: /home/tama/catkin_ws/devel
-install: false
-install_space: /home/tama/catkin_ws/install
-profile: default
-source_space: /home/tama/catkin_ws/src
-workspace: /home/tama/catkin_ws

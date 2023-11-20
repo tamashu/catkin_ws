@@ -1,8 +1,0 @@
-prefix=/home/tama/catkin_ws/devel/.private/test_arm
-
-Name: test_arm
-Description: Description of test_arm
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

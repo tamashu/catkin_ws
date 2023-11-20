@@ -1,1 +1,0 @@
-/home/tama/catkin_ws/devel/.private/pysdf/lib/python3/dist-packages/pysdf/__init__.py

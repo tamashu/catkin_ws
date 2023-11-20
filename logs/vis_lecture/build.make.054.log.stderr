@@ -1,9 +1,0 @@
-/usr/bin/ld: CMakeFiles/rollerWalker_joint_state_publisher.dir/src/rollerWalker_joint_state_publisher.cpp.o: in function `main':
-rollerWalker_joint_state_publisher.cpp:(.text+0x10e): undefined reference to `BaseRollerWalker::BaseRollerWalker(double, double, double, double, double, double, bool)'
-/usr/bin/ld: rollerWalker_joint_state_publisher.cpp:(.text+0x632): undefined reference to `BaseRollerWalker::d_front(double, double, double)'
-/usr/bin/ld: rollerWalker_joint_state_publisher.cpp:(.text+0x68c): undefined reference to `BaseRollerWalker::calTheta2(double)'
-collect2: error: ld returned 1 exit status
-make[2]: *** [CMakeFiles/rollerWalker_joint_state_publisher.dir/build.make:106: /home/tama/catkin_ws/devel/.private/vis_lecture/lib/vis_lecture/rollerWalker_joint_state_publisher] エラー 1
-make[1]: *** [CMakeFiles/Makefile2:1599: CMakeFiles/rollerWalker_joint_state_publisher.dir/all] エラー 2
-make[1]: *** 未完了のジョブを待っています....
-make: *** [Makefile:141: all] エラー 2

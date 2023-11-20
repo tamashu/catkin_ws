@@ -1,1 +1,0 @@
-/home/tama/catkin_ws/devel/.private/basic_lecture/lib/pkgconfig/basic_lecture.pc

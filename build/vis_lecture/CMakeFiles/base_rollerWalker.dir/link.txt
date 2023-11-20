@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC   -shared -Wl,-soname,libbase_rollerWalker.so -o /home/tama/catkin_ws/devel/.private/vis_lecture/lib/libbase_rollerWalker.so CMakeFiles/base_rollerWalker.dir/src/BaseRollerWalker.cpp.o 

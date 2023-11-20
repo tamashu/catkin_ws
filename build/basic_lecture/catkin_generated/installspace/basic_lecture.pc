@@ -1,8 +1,0 @@
-prefix=/home/tama/catkin_ws/install
-
-Name: basic_lecture
-Description: Description of basic_lecture
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

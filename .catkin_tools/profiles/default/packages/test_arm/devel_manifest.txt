@@ -1,5 +1,0 @@
-test_arm
-/home/tama/catkin_ws/devel/.private/test_arm/cmake.lock /home/tama/catkin_ws/devel/./cmake.lock
-/home/tama/catkin_ws/devel/.private/test_arm/share/test_arm/cmake/test_armConfig-version.cmake /home/tama/catkin_ws/devel/share/test_arm/cmake/test_armConfig-version.cmake
-/home/tama/catkin_ws/devel/.private/test_arm/share/test_arm/cmake/test_armConfig.cmake /home/tama/catkin_ws/devel/share/test_arm/cmake/test_armConfig.cmake
-/home/tama/catkin_ws/devel/.private/test_arm/lib/pkgconfig/test_arm.pc /home/tama/catkin_ws/devel/lib/pkgconfig/test_arm.pc
