@@ -140,7 +140,7 @@
             <child  link="joint_2_${leg_posi}"/>
             <origin rpy="1.57070 0 0" xyz="0 0 0"/>
             <dynamics damping="${joint_1_to_joint_2_damping}"/>
-            <limit lower="-1.5" upper="1.5" effort="0" velocity="0"/>
+            <limit lower="-1.5" upper="1.5" effort="100" velocity="100"/>
         </joint>
 
         <!-- ジョイント2のトランスミッション -->
@@ -220,7 +220,7 @@
             <child  link="joint_3_${leg_posi}"/>
             <origin rpy="1.57070 0 0" xyz="${link_2_x} 0 0"/>
             <dynamics damping="${link_2_to_joint_3_damping}"/>
-            <limit lower="-2.0" upper="1.5" effort="0" velocity="0"/>
+            <limit lower="-2.0" upper="1.5" effort="100" velocity="100"/>
         </joint>
 
         <!-- ジョイント3のトランスミッション -->
@@ -300,7 +300,7 @@
             <child  link="joint_4_${leg_posi}"/>
             <origin rpy="1.57070 0 0" xyz="${link_3_x} 0 0"/>
             <dynamics damping="${link_3_to_joint_4_damping}"/>
-            <limit lower="-2.0" upper="1.5" effort="0" velocity="0"/>
+            <limit lower="-2.0" upper="1.5" effort="100" velocity="100"/>
         </joint>
 
         <!-- ジョイント3のトランスミッション -->
@@ -469,7 +469,7 @@
         <axis xyz="0 0 1"/>
         <origin xyz="${body_length/2 - joint_1_radius/2} ${body_width/2 - joint_1_radius/2} 0.0" rpy="0 0 0"/>
         <dynamics damping="${body_to_joint_1_damping}"/>
-        <limit lower="0.2" upper="3" effort="0" velocity="0"/>
+        <limit lower="0.2" upper="3" effort="100" velocity="100"/>
     </joint>
 
     <!-- ジョイント1_LFトランスミッション設定 -->
@@ -514,7 +514,7 @@
         <axis xyz="0 0 1"/>
         <origin xyz="${-(body_length/2 - joint_1_radius/2)} ${body_width/2 - joint_1_radius/2} 0.0" rpy="0 0 0"/>
         <dynamics damping="${body_to_joint_1_damping}"/>
-        <limit lower="0.2" upper="3" effort="0" velocity="0"/>
+        <limit lower="0.2" upper="3" effort="100" velocity="100"/>
     </joint>
 
     <!-- ジョイント1_LRトランスミッション設定 -->
@@ -559,7 +559,7 @@
         <axis xyz="0 0 1"/>
         <origin xyz="${-(body_length/2 - joint_1_radius/2)} ${-(body_width/2 - joint_1_radius/2)} 0.0" rpy="0 0 0"/>
         <dynamics damping="${body_to_joint_1_damping}"/>
-        <limit lower="-3" upper="-0.2" effort="0" velocity="0"/>
+        <limit lower="-3" upper="-0.2" effort="100" velocity="100"/>
     </joint>
 
     <!-- ジョイント1_RRトランスミッション設定 -->
@@ -604,7 +604,7 @@
         <axis xyz="0 0 1"/>
         <origin xyz="${body_length/2 - joint_1_radius/2} ${-(body_width/2 - joint_1_radius/2)} 0.0" rpy="0 0 0"/>
         <dynamics damping="${body_to_joint_1_damping}"/>
-        <limit lower="-3" upper="-0.2" effort="0" velocity="0"/>
+        <limit lower="-3" upper="-0.2" effort="100" velocity="100"/>
     </joint>
 
     <!-- ジョイント1_RFトランスミッション設定 -->
